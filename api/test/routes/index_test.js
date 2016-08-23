@@ -1,7 +1,4 @@
-require('must');
-const app = require('../../src/app');
-const doubleagent = require('doubleagent');
-const agent = doubleagent(app);
+const { agent } = require('../helper');
 
 describe('/ route', () => {
   it('responds nicely', () => {

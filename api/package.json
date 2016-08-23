@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "start": "PORT=3000 node src/server.js",
-    "test": "mocha --recursive"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
