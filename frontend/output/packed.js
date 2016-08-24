@@ -54,11 +54,13 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _title_input = __webpack_require__(172);
+	var _app = __webpack_require__(172);
+
+	var _app2 = _interopRequireDefault(_app);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(_title_input.TitleInput, null), document.querySelector("#container"));
+	_reactDom2.default.render(_react2.default.createElement(_app2.default, null), document.querySelector("#container"));
 
 /***/ },
 /* 1 */
@@ -21420,24 +21422,44 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.TitleInput = undefined;
+	exports.default = App;
 
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(34);
+	var _title_input = __webpack_require__(173);
 
-	var _reactDom2 = _interopRequireDefault(_reactDom);
+	var _title_input2 = _interopRequireDefault(_title_input);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var TitleInput = exports.TitleInput = function TitleInput() {
-	  return {
-	    render: function render() {
-	      return _react2.default.createElement("input", { type: "text", value: "Hello!" });
-	    }
-	  };
+	function App() {
+	  return _react2.default.createElement(
+	    "div",
+	    null,
+	    _react2.default.createElement(_title_input2.default, null)
+	  );
+	}
+
+/***/ },
+/* 173 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = function () {
+	  return _react2.default.createElement("input", { type: "text" });
 	};
 
 /***/ }

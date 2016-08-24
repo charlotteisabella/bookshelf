@@ -1,6 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from "react"
+import TitleInput from "./components/title_input"
 
-import { TitleInput } from "./components/title_input.js"
-
-ReactDOM.render( <TitleInput/>, document.querySelector("#container") );
+export default function App() {
+  return(
+    <div>
+      <TitleInput/>
+    </div>
+  );
+}

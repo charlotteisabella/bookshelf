@@ -5,7 +5,7 @@ var SRC = path.resolve(__dirname, "src");
 var OUTPUT = path.resolve(__dirname, "output");
 
 var config = {
-  entry: SRC + "/app.js",
+  entry: SRC + "/index.js",
   output: {
     path: OUTPUT,
     filename: "packed.js"
