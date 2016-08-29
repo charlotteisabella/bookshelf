@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PropTypes } from 'react'
 import styles from "./title_input.css"
 import CSSModules from "react-css-modules"
 
@@ -8,4 +8,9 @@ const TitleInput = () => {
   );
 };
 
+TitleInput.propTypes = {
+  title: PropTypes.string.isRequired
+}
+
+export default TitleInput
 export default CSSModules(TitleInput, styles);

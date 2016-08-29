@@ -1,8 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import bookShelf from './redux/reducers/books.js'
 import App from "./app"
 
+let store = createStore(bookShelf)
 
-
-ReactDOM.render( <App/>, document.querySelector("#container") );
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.querySelector("#container")
+);
