@@ -1,11 +1,16 @@
-import React from "react";
-import styles from "./delete_button.css"
+import React, { PropTypes } from 'react'
 import CSSModules from "react-css-modules"
 
-const DeleteButton = () => {
+const DeleteButton = ({ onClick }) => {
   return (
-    <button>Delete</button>
+    <button onClick={onClick}>
+      DeleteButton
+    </button>
   );
 };
 
-export default CSSModules(DeleteButton, styles);
+DeleteButton.propTypes = {
+  onClick: PropTypes.func.isRequired
+}
+
+export default DeleteButton

@@ -5,7 +5,7 @@ import { createStore } from 'redux'
 import bookShelf from './redux/reducers/books.js'
 import App from "./app"
 
-let store = createStore(bookShelf)
+let store = createStore(bookShelf, window.STATE_FROM_SERVER)
 
 ReactDOM.render(
   <Provider store={store}>

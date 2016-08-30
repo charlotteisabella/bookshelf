@@ -1,12 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addBook } from '../redux/actions/books'
-import TitleInput from "../components/title_input"
-import RatingInput from "../components/rating_input"
-import SubmitButton from "../components/submit_button"
 
 let Inputs = ({ dispatch }) => {
   let input
+  let select
   return (
     <div>
       <form onSubmit={e => {
@@ -14,12 +12,25 @@ let Inputs = ({ dispatch }) => {
         if (!input.value.trim()) {
           return
         }
-        dispatch(addBook(input.value))
+        dispatch(addBook(input.value, select.value))
         input.value = ''
+        select.value = 1
       }}>
+
         <input ref={node => {
           input = node
         }} />
+
+        <select ref={node => {
+          select = node
+        }} >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+
         <button type="submit">
           Add
         </button>
