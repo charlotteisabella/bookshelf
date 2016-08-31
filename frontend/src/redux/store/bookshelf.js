@@ -1,5 +1,10 @@
-import { createStore } from 'redux'
+import { createStore, combineReducers } from 'redux'
 import bookShelf from '../reducers/books.js'
-import { ADD_BOOK, EDIT_BOOK, DELETE_BOOK, addBook } from '../actions/books'
+import { reducer as formReducer } from 'redux-form'
 
-let store = createStore(bookShelf, window.STATE_FROM_SERVER)
+const reducers = {
+  books: bookShelf,
+  form: formReducer
+}
+const reducer = combineReducers(reducers)
+const store = createStore(reducer)
